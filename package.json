@@ -1,5 +1,5 @@
 {
-  "name": "form-lib",
+  "name": "@knat_dev/form-lib",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
