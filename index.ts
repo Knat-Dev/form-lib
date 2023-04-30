@@ -1,2 +1,2 @@
-export * from "./components/FormFactory";
-export * from "./hooks/useFormFactory";
+export * from "./src/components/FormFactory";
+export * from "./src/hooks/useFormFactory";
