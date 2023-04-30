@@ -1,6 +1,5 @@
-import { clsxm } from "@blog/utils/clsxm";
-import { useFormFactory } from "@blog/utils/hooks/useFormFactory";
 import type { HTMLAttributes, ReactNode } from "react";
+import React from "react";
 import type {
   DeepPartial,
   FieldError,
@@ -11,6 +10,7 @@ import type {
   UseFormWatch,
 } from "react-hook-form";
 import type { ZodSchema } from "zod";
+import { useFormFactory } from "../hooks/useFormFactory";
 
 interface FormFieldProps<T extends FieldValues> {
   register: UseFormRegister<T>;
@@ -70,10 +70,7 @@ export function FormFactory<T extends FieldValues>({
     });
 
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      className={clsxm("flex flex-col gap-2", className)}
-    >
+    <form onSubmit={handleFormSubmit} className={className}>
       {fields?.map(({ component: Component, ...props }, index) => (
         <Component
           key={props.name as string}
